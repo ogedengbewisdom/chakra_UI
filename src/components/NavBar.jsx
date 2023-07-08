@@ -4,12 +4,12 @@ import React from 'react'
 export default function NavBar() {
   return (
     
-    <Flex p={"10px"} as={"nav"} bg={"orange.300"} alignItems={"center"}>
+    <Flex as={"nav"} alignItems={{base: "flex-start", md: "center"}} flexDirection={{base: "column", md: "row"}} mb={"18px"} >
       <Heading as={"h1"} gap={"10px"} whiteSpace={"nowrap"}>Chakra Tasks</Heading>
       <Spacer />
-      <HStack spacing={"3"} wrap={"wrap"}>
+      <HStack spacing={"1"} flexDirection={{base: "column", md: "row"}} alignItems={{base: "flex-start", md: "center"}}>
       <Box bg={"gray.200"} p={"10px"}>M</Box>
-      <Text>Ogedengbewisdom@gmail.com</Text>
+      <Box p={"10px"}>Ogedengbewisdom@gmail.com</Box>
       <Button colorScheme='purple'>Logout</Button>
       </HStack>
     </Flex>
