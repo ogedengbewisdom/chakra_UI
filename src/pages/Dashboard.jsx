@@ -1,8 +1,10 @@
 import { EditIcon, ViewIcon } from "@chakra-ui/icons";
-import { Box, Button, Card, CardBody, CardFooter, CardHeader, Container, Divider, Flex, HStack, Heading, SimpleGrid, Spacer, Text } from "@chakra-ui/react";
+import { Box, Button, Card, CardBody, CardFooter, CardHeader, Container, Divider, Flex, HStack, Heading, SimpleGrid, Spacer, Text, Avatar} from "@chakra-ui/react";
 import { useLoaderData } from "react-router-dom";
 
 export default function Dashboard() {
+
+
   // const container = {
     
   //   maxWidth: "4xl",
@@ -59,9 +61,7 @@ export default function Dashboard() {
       <Card key={item.id} borderTop={"8px"} borderTopColor={"purple.500"}>
         <CardHeader>
           <Flex gap={5}>
-            <Box w={"50px"} h={"50px"}>
-              <Text>AV</Text>
-            </Box>
+            <Avatar src={item.img} />
             <Box>
               <Heading as={"h3"} size={"sm"}>{item.title}</Heading>
               <Text>By {item.author}</Text>
